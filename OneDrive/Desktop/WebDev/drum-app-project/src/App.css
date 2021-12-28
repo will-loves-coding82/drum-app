@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Rajdhani:wght@300&display=swap');
+
+#drum-machine{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+#display{
+  display: flex;
+  width: 50vw;
+  height: 45vh;
+  background-color: #3f7393;
+  border-color: #c37713;
+  border-width: 10px;
+  border-style: solid;
+  font-family: 'Rajdhani';
+  font-size: 1.3em;
+  font-weight: 900;
+  margin: 0 auto;
+}
+
+.footer{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

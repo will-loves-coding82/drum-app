@@ -1,0 +1,13 @@
+
+#info-display{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    text-align: center;
+    width: 20vw;
+    height: 7vh;
+    margin: 10x auto;
+    font-size: 1.1em;
+    border-radius: 5px;
+}
