@@ -115,3 +115,19 @@ input:checked + .slider:before {
 #vol-slider:hover{
     cursor: pointer;
 }
+
+
+
+@media only screen and (max-width: 600px) {
+  .slider{
+    transform: scale(0.75);
+  }
+}
+
+@media only screen and (max-width: 475px) {
+   .slider{
+    transform: scale(0.50);
+  }
+}
+
+

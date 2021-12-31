@@ -15,7 +15,7 @@ class  Display extends React.Component{
     
     render() {
 
-        console.log('the global name in Display is' + this.props.input)
+        console.log('the global input in Display is' + this.props.input)
 
 
         if(this.props.power){

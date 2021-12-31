@@ -32,7 +32,6 @@ class Controls extends React.Component {
     }
     
 
-
     // function to handle toggling the power switch
     togglePower() {
  
@@ -41,7 +40,7 @@ class Controls extends React.Component {
         })
         console.log('the sound was turned to ' + !this.state.soundOn);
 
-        // dispatch this action for the global state power
+        // dispatch this action for the app's state power
         this.props.onSwitchPower(!this.state.soundOn);
     }
 
@@ -55,7 +54,6 @@ class Controls extends React.Component {
 
     render() {
 
-        console.log('the control power is ' + this.state.soundOn)
         console.log('the global power is ' + this.props.power)
         console.log('the global bank is ' + this.props.bank)
 
@@ -72,7 +70,7 @@ class Controls extends React.Component {
                 <Display />  
                 
                 {/* if the global power is turned on then the display will be normal and the volume slider will be immutable*/}
-                {this.props.power == true && 
+                {this.props.power === true && 
                     <div>
                          
                         <div id='vol-container'>
@@ -81,9 +79,8 @@ class Controls extends React.Component {
                     </div>
                 }
 
-
                 {/* if the power is turned off, then the volume slider will be immutable and display will not hold text */}
-                {this.props.power == false && 
+                {this.props.power === false && 
                 <div>
             
                     <div id='vol-container'> 
@@ -92,7 +89,6 @@ class Controls extends React.Component {
                 </div>
                 }
 
-                
                 <label id="toggle-bank">
                     <input type="checkbox" value={this.props.bank} onChange={this.toggleBank} />
                     <span className="slider"></span>

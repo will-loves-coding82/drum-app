@@ -76,6 +76,12 @@ class KeyBoard extends React.Component {
             const audio = document.getElementById(ID);
             audio.volume = this.props.volume/100.0;
             console.log('audio volume is now at ' + audio.volume)
+
+            // if the user wants to play the audio again while clicking, then replay it rather than waiting for it to finish
+            if (!audio.ended) {
+                audio.load();
+                audio.play();
+            }
             audio.play();
             this.dispatchActions(ID.toLowerCase());
             }
@@ -102,6 +108,11 @@ class KeyBoard extends React.Component {
                 // play the audio ony if power is on
                 const audio = document.getElementById(ev.key.toLocaleUpperCase())
                 audio.volume = self.props.volume/100.0;
+
+                if (!audio.ended) {
+                    audio.load();
+                    audio.play();
+                }
                 audio.play();
                 self.dispatchActions(ev.key);
             }
@@ -142,7 +153,18 @@ class KeyBoard extends React.Component {
 
 
 
-/////// these actions update the name and value of what is being displayed //////
+
+
+
+
+
+
+
+
+
+
+
+/////// these REDUX store actions update the name and value of what is being displayed //////
 
 const displayHeater1 = () => {
     console.log('heater1 action dispatched')
